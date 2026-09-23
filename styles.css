@@ -1,0 +1,292 @@
+:root {
+  --surface: hsl(40, 50%, 96%);
+  --band:    hsl(38, 40%, 88%);
+  --text:    hsl(150, 25%, 11%);
+  --brand:   hsl(152, 50%, 20%);
+  --accent:  hsl(16, 70%, 40%);
+
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 1rem;
+  --sp-4: 1.5rem;
+  --sp-5: 2rem;
+  --sp-6: 3rem;
+
+  --radius: 6px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, serif;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--brand);
+  transition: color 200ms ease-out;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "hero"
+    "trails"
+    "schedule"
+    "included"
+    "book";
+}
+
+.hero     { grid-area: hero; }
+.trails   { grid-area: trails; }
+.schedule { grid-area: schedule; }
+.included { grid-area: included; }
+.book     { grid-area: book; }
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  padding: var(--sp-6) var(--sp-3);
+}
+
+.hero,
+.schedule {
+  background: var(--band);
+}
+
+.book {
+  background: var(--brand);
+  color: var(--surface);
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-4) var(--sp-3);
+}
+
+.logo {
+  color: var(--brand);
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-4);
+}
+
+.hero h1 {
+  color: var(--brand);
+}
+
+.hero p {
+  font-size: 1.125rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+}
+
+.button {
+  padding: var(--sp-2) var(--sp-4);
+  border: 2px solid var(--brand);
+  border-radius: var(--radius);
+  background: var(--brand);
+  color: var(--surface);
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: transform 200ms ease-out;
+}
+
+.button:hover {
+  transform: scale(1.04);
+  color: var(--surface);
+}
+
+.button-light {
+  background: var(--surface);
+  color: var(--brand);
+}
+
+.button-light:hover {
+  color: var(--brand);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+}
+
+.card {
+  flex: 1 1 16rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding: var(--sp-4);
+  background: var(--band);
+  border-radius: var(--radius);
+}
+
+.card h3 {
+  color: var(--brand);
+}
+
+.level {
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+th,
+td {
+  padding: var(--sp-2);
+}
+
+th {
+  background: var(--brand);
+  color: var(--surface);
+}
+
+td {
+  background: var(--surface);
+}
+
+.included ul {
+  margin: 0;
+  padding-left: var(--sp-4);
+}
+
+.included li {
+  margin-bottom: var(--sp-1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+}
+
+.field {
+  flex: 1 1 12rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.field-wide {
+  flex-basis: 100%;
+}
+
+label {
+  font-weight: 700;
+}
+
+input,
+textarea {
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--band);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+}
+
+.book .button {
+  align-self: flex-start;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-5) var(--sp-3);
+  background: var(--band);
+  font-size: 0.875rem;
+}
+
+@media (min-width: 1024px) {
+  .page {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "hero     hero"
+      "trails   trails"
+      "schedule included"
+      "book     book";
+  }
+
+  .navbar {
+    padding: var(--sp-4) var(--sp-6);
+  }
+
+  section {
+    padding: var(--sp-6);
+  }
+
+  .footer {
+    padding: var(--sp-5) var(--sp-6);
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero h1,
+  .hero p {
+    width: 60%;
+  }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jurd | Weekend hikes in Lebanon</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <a class="logo" href="#hero">Jurd</a>
+
+    <nav class="nav-links" aria-label="Main">
+      <a href="#trails">Trails</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#book">Book</a>
+    </nav>
+  </header>
+
+  <main class="page">
+
+    <section id="hero" class="hero">
+      <h1>Weekend hikes in the mountains of Lebanon</h1>
+      <p>
+        Every Saturday, Jurd takes a small group from Beirut to one of the
+        country's best trails. We drive, a local guide leads the way, and
+        lunch is in a village guesthouse.
+      </p>
+
+      <div class="buttons">
+        <a class="button" href="#book">Book a hike</a>
+        <a class="button button-light" href="#trails">See the trails</a>
+      </div>
+    </section>
+
+    <section id="trails" class="trails">
+      <h2>Our trails</h2>
+      <p>Three routes, from an easy forest walk to a full day in the high mountains.</p>
+
+      <div class="cards">
+        <div class="card">
+          <p class="level">Easy</p>
+          <h3>Chouf Cedars</h3>
+          <p>A shaded walk under old cedar trees. About 6 km and 3 hours.</p>
+        </div>
+
+        <div class="card">
+          <p class="level">Moderate</p>
+          <h3>Qadisha Valley</h3>
+          <p>Down into the valley, past monasteries built into the rock. About 11 km and 5 hours.</p>
+        </div>
+
+        <div class="card">
+          <p class="level">Hard</p>
+          <h3>Qornet es-Sawda</h3>
+          <p>A long climb to the highest peak in Lebanon. About 14 km and 7 hours.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule" class="schedule">
+      <h2>Upcoming hikes</h2>
+      <p>All hikes are on Saturdays. We leave Beirut at 7:00 and are back by 19:00.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Trail</th>
+            <th>Level</th>
+            <th>Spots left</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>3 Oct</td><td>Chouf Cedars</td><td>Easy</td><td>6</td></tr>
+          <tr><td>10 Oct</td><td>Qadisha Valley</td><td>Moderate</td><td>4</td></tr>
+          <tr><td>17 Oct</td><td>Qornet es-Sawda</td><td>Hard</td><td>8</td></tr>
+          <tr><td>24 Oct</td><td>Chouf Cedars</td><td>Easy</td><td>10</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="included" class="included">
+      <h2>What's included</h2>
+
+      <ul>
+        <li>Transport from Beirut and back</li>
+        <li>A local guide who knows the trail</li>
+        <li>Lunch in a village guesthouse</li>
+        <li>A first-aid kit on every hike</li>
+      </ul>
+
+      <p>Bring good shoes, two litres of water and a warm jacket.</p>
+    </section>
+
+    <section id="book" class="book">
+      <h2>Book your spot</h2>
+      <p>Tell us who is coming and we will confirm by email within a day.</p>
+
+      <form action="#book" method="post">
+        <div class="fields">
+
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone (8 digits)</label>
+            <input id="phone" name="phone" type="tel" pattern="[0-9]{8}" required>
+          </div>
+
+          <div class="field">
+            <label for="people">People (1 to 12)</label>
+            <input id="people" name="people" type="number" min="1" max="12" required>
+          </div>
+
+          <div class="field field-wide">
+            <label for="message">Which trail, and anything we should know?</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+
+        </div>
+
+        <button class="button button-light" type="submit">Send my booking</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>2026 Jurd</p>
+    <a href="mailto:alexelachkar@gmail.com">alexelachkar@gmail.com</a>
+  </footer>
+
+</body>
+</html>
